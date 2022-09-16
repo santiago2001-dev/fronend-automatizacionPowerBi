@@ -38,4 +38,47 @@
   
   
  
-  
+    <table class="table">
+      <thead>
+        <tr>
+              
+        
+          <th scope="col"> nombre </th>
+          <th scope="col"> codigo </th>
+     
+          <!-- <th scope="col"> contraseña </th> -->
+    
+
+<th><button class="btn btn-dark btn-sm" routerLink="/addDoc">NUEVO</button>
+
+          </th>
+
+        </tr>
+      </thead>
+      <tbody >
+        <tr  *ngFor=" let doc of listdoc">
+          
+          
+          <td scope="col">{{doc.nombre}}</td>
+          <td scope="row">{{doc.codigo}}</td>
+       
+        
+          
+          <td>
+            <div class="options">
+              <i  (click)="deleteDocument(doc.id)" class="fa-solid fa-trash"></i>
+              <br>
+              <i [routerLink]="['/update-doc',(doc.id)]" class="fa-solid fa-file-pen"></i>
+
+              <!-- <li >
+                <ul></ul>
+              </li> -->
+            </div>
+           
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>

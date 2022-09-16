@@ -4,10 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from './components/login/login.component';
 import {AuthGuard}  from './guards/login.guard'
 import { UsersComponent } from './components/home/users.component';
+import {AdddcomentComponent}from './components/addddoc/adddcoment.component'
 const routes : Routes = [
   {path: 'login',component: LoginComponent},
-  {path : 'inicio',component :UsersComponent,canActivate:[AuthGuard]}
-  
+  {path : 'inicio',component :UsersComponent},
+  {path: 'addDoc',component: AdddcomentComponent},
+  {path: 'update-doc/:id',component: AdddcomentComponent}
 ]
 
 

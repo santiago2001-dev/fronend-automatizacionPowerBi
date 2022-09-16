@@ -1,0 +1,42 @@
+<br>
+<div class="container mt-5" id="fondo">
+    <h1 class="title"> {{titulo}}</h1>
+    <!-- previsualizacion de imagen -->
+    
+  <br>
+     <form class="form" [formGroup]="docForm" (submit)="addDoc()">
+    <input type="hidden" formControlName = "id">
+
+        <div class="container mb-3">
+
+            <input type="text" formControlName="nombre" class="form-control" placeholder="nombre " required>
+            <div class="text-danger"*ngIf="nombre?.dirty &&(nombre?.dirty || nombre?.touched) && docForm.get('name')?.hasError('required')">
+                <!-- <div class="text-danger"*ngIf="enlaceForm.get('name')?.hasError('required')"> -->
+                <span>los campos son <strong>obligatorios</strong></span>
+                </div>
+              </div>
+
+              <div class="container mb-3">
+
+                <input type="text" formControlName="codigo" class="form-control" placeholder="codigo" required>
+                <div class="text-danger"*ngIf="nombre?.dirty &&(codigo?.dirty || codigo?.touched) && docForm.get('codigo')?.hasError('required')">
+                    <!-- <div class="text-danger"*ngIf="codigoForm.get('name')?.hasError('required')"> -->
+                    <span>los campos son <strong>obligatorios</strong></span>
+                    </div>
+                  
+                
+               
+            </div>
+
+
+
+   
+        <div class="container mb-3">
+           <button class="btn btn-dark btn-sm"> Enviar</button>
+            <button style="margin-left: 5px;" class="btn btn-dark btn-sm" routerLink="/inicio"> Volver</button>
+
+        </div>
+
+        <br>
+    </form>
+</div>

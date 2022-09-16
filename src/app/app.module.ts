@@ -10,11 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AdddcomentComponent } from './components/addddoc/adddcoment.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UsersComponent
+    UsersComponent,
+ 
+    AdddcomentComponent
 
   ],
   imports: [
